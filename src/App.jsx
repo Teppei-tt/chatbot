@@ -18,8 +18,7 @@ export default class App extends React.Component {
     this.selectAnswer = this.selectAnswer.bind(this)
   }
 // Function //
-
-displayNextQestion = (nextQuestionId) => {
+displayNextQuestion = (nextQuestionId) => {
   const chats = this.state.chats
   chats.push({
     text: this.state.dataset[nextQuestionId].question,
@@ -36,7 +35,7 @@ displayNextQestion = (nextQuestionId) => {
 selectAnswer = (selectedAnswer, nextQuestionId) => {
   switch(true) {
     case (nextQuestionId === 'init'):
-      this.displayNextQestion(nextQuestionId)
+      this.displayNextQuestion(nextQuestionId)
       break;
     default:
       const chats = this.state.chats;
@@ -49,7 +48,7 @@ selectAnswer = (selectedAnswer, nextQuestionId) => {
           chats: chats
       })
 
-      this.displayNextQestion(nextQuestionId)
+      this.displayNextQuestion(nextQuestionId)
       break;
   }
 }

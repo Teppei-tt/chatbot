@@ -7,17 +7,16 @@ import Teppei from '../assets/img/my-img.PNG'
 
 const Chat = (props) => {
   const isQuestion = ( props.type === 'question');
-  const classes = isQuestion ? 'p-chat__row' : 'p-chat__reverse';
+  const classes = isQuestion ? "p-chat__row" : "p-chat__reverse" ;
 
   return (
-    <ListItem className="classes">
+    <ListItem className={classes}>
     <ListItemAvatar>
       {isQuestion ? (
         <Avatar alt="icon" src={Teppei} />
       ) : (
         <Avatar alt="icon" src={NoProfile} />
       )}
-      
     </ListItemAvatar>
     <div className="p-chat__bubble">{props.text}</div>
   </ListItem>
