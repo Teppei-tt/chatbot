@@ -23,7 +23,7 @@ const Answer = (props) => {
   return (
     <Button 
       className={classes.button}  
-      variant="outlined" onClick={() => props.select(props.content,props.nextId)}
+      variant="outlined" onClick={() => props.select(props.content, props.nextId)}
     >
       {props.content}
     </Button>
