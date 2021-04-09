@@ -35,8 +35,14 @@ displayNextQuestion = (nextQuestionId) => {
 selectAnswer = (selectedAnswer, nextQuestionId) => {
   switch(true) {
     case (nextQuestionId === 'init'):
-      this.displayNextQuestion(nextQuestionId)
+      setTimeout(() => this.displayNextQuestion (nextQuestionId), 600);
       break;
+    case (/^https:*/.test(nextQuestionId)):
+      const a = document.createElement( 'a' );
+      a.href  = nextQuestionId;
+      a.target = '_blank';
+      a.click();
+      break
     default:
       const chats = this.state.chats;
       chats.push({
@@ -48,7 +54,7 @@ selectAnswer = (selectedAnswer, nextQuestionId) => {
           chats: chats
       })
 
-      this.displayNextQuestion(nextQuestionId)
+      setTimeout(() => this.displayNextQuestion(nextQuestionId), 600);
       break;
   }
 }
@@ -56,6 +62,13 @@ selectAnswer = (selectedAnswer, nextQuestionId) => {
  componentDidMount() {
    const initAnswer = "";
    this.selectAnswer(initAnswer, this.state.currentId)
+ }
+
+ componentDidUpdate(prevProps, prevState, snapshot) {
+   const scrollArea = document.getElementById('scroll-area')
+   if( scrollArea ) {
+     scrollArea.scrollTop = scrollArea.scrollHeight
+   }
  }
 
   render() {
