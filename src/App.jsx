@@ -2,6 +2,7 @@ import React from 'react'
 import defaultDataset from "./dataset";
 import './assets/styles/style.css'
 import {AnswersList, Chats} from "./components/index"
+import FromDialog from './components/Forms/FormDialog';
 // import { ThreeSixty } from '@material-ui/icons';
 
 export default class App extends React.Component {
@@ -16,6 +17,8 @@ export default class App extends React.Component {
       open: false
     }
     this.selectAnswer = this.selectAnswer.bind(this)
+    this.handleClickOpen = this.handleClickOpen.bind(this) 
+    this.handleClose = this.handleClose.bind(this) 
   }
 // Function //
 displayNextQuestion = (nextQuestionId) => {
@@ -37,6 +40,11 @@ selectAnswer = (selectedAnswer, nextQuestionId) => {
     case (nextQuestionId === 'init'):
       setTimeout(() => this.displayNextQuestion (nextQuestionId), 600);
       break;
+
+    case (nextQuestionId === 'contact'):
+      this.handleClickOpen();
+      break;
+
     case (/^https:*/.test(nextQuestionId)):
       const a = document.createElement( 'a' );
       a.href  = nextQuestionId;
@@ -59,6 +67,14 @@ selectAnswer = (selectedAnswer, nextQuestionId) => {
   }
 }
 
+handleClickOpen = () => {
+  this.setState({ open: true }) ;
+};
+
+handleClose = () => {
+  this.setState({ open: false }) ;
+};
+
  componentDidMount() {
    const initAnswer = "";
    this.selectAnswer(initAnswer, this.state.currentId)
@@ -77,6 +93,7 @@ selectAnswer = (selectedAnswer, nextQuestionId) => {
        <div className="c-box">
         <Chats chats={this.state.chats} />
         <AnswersList answers={this.state.answers} select={this.selectAnswer} />
+        <FromDialog open={this.state.open} handleClose={this.handleClose} />
        </div>
      </section>
     );
