@@ -3,7 +3,7 @@ import './assets/styles/style.css'
 import {AnswersList, Chats} from "./components/index"
 import FromDialog from "./components/Forms/FormDialog";
 import {db} from './firebase/index'
-
+import Test from "./components/test"
 const App = () => {
   // 回答コンポーネントに表示するでーた
   const [answers, setAnswers] = useState([]);
@@ -103,6 +103,7 @@ useEffect(() => {
 
   return (
     <section className="c-section">
+      < Test/>
       <div className="c-box">
         <Chats chats={chats} />
         <AnswersList answers={answers} select={selectAnswer} />

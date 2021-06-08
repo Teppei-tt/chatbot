@@ -45,7 +45,7 @@ export default class FromDialog extends React.Component {
             'お問い合わせ内容\n:' + description
     }
     // SlackのURLは公開しては行けない。
-    const url = '';
+    const url = 'https://hooks.slack.com/services/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';
 
     fetch(url, {
       method: 'POST',
