@@ -5,15 +5,10 @@ import FromDialog from "./components/Forms/FormDialog";
 import {db} from './firebase/index'
 
 const App = () => {
-  // 回答コンポーネントに表示するでーた
   const [answers, setAnswers] = useState([]);
-  // チャットコンポーネントに表示するデータ
   const [chats, setChats] = useState([]);
-  // 現在の質問ID
   const [currentId, setCurrendId] = useState( "init");
-  // 質問と回答のデータセット
   const [dataset, setDataset] = useState({});
-  // 問い合わせフォーム用モーダルの開閉を管理
   const [open, setOpen] = useState(false);
 
   // Function
