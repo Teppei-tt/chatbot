@@ -1,6 +1,8 @@
 import React, {useState, useEffect, useCallback} from 'react'
 import './assets/styles/style.css'
 import {AnswersList, Chats} from "./components/index"
+import { Header } from './components/Header/Header';
+
 import FromDialog from "./components/Forms/FormDialog";
 import {db} from './firebase/index'
 
@@ -98,6 +100,7 @@ const App = () => {
 
   return (
     <section className="c-section">
+      <Header />
       <div className="c-box">
         <Chats chats={chats} />
         <AnswersList answers={answers} select={selectAnswer} />
