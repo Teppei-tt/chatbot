@@ -1,3 +1,11 @@
+#　ブランチルール
+
+master　：　公開中のメインブランチ　developをマージする。直接pushしない。
+
+develop　：　開発時のブランチ。基本的にここに常駐。
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
