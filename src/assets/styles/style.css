@@ -74,3 +74,7 @@
   justify-content: center;
   align-items: center;
 }
+
+.header_left {
+  font-size: 40px;
+}
