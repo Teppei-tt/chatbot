@@ -6,7 +6,7 @@
 
 .c-box {
   background: #fff;
-  border: 1px solid rgba(0,0,0,0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   border-radius: 4px;
   box-sizing: border-box;
   height: 592px;
@@ -29,12 +29,12 @@
 }
 
 .p-chat__bubble {
-  background: #41B6E6;
+  background: #41b6e6;
   border-radius: 4px;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
-  padding: .5rem;
+  padding: 0.5rem;
   margin-right: 1rem;
   max-width: 80%;
   width: auto;
@@ -62,7 +62,7 @@
 
 .p-question__description {
   font-size: 1rem;
-  letter-spacing: .125rem;
+  letter-spacing: 0.125rem;
   line-height: 1.7;
 }
 
