@@ -35,7 +35,7 @@ export const Header = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" className={classes.title}>
-            News
+            MyApp
           </Typography>
           <Button color="inherit">Login</Button>
         </Toolbar>
