@@ -5,6 +5,7 @@ import { Header } from "./components/Header/Header";
 
 import FromDialog from "./components/Forms/FormDialog";
 import { db } from "./firebase/index";
+import { Login } from "./components/login/login";
 
 const App = () => {
   const [answers, setAnswers] = useState([]);
@@ -106,6 +107,7 @@ const App = () => {
   return (
     <section className="c-section">
       <Header />
+      <Login/>
       <div className="c-box">
         <Chats chats={chats} />
         <AnswersList answers={answers} select={selectAnswer} />
