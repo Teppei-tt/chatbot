@@ -42,12 +42,15 @@ export const Login = () => {
       <Card className={classes.root}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
-            Lizard
+            Login画面
           </Typography>
-          <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+          <Typography gutterBottom variant="h5" component="p">
+            パスワードを入力してください！
+          </Typography>
+          <TextField id="outlined-basic" label="Enter Password" variant="outlined" />
         </CardContent>
         <CardActions>
-          <Button size="small" onClick={onClickLogin}>
+          <Button variant="contained" color="primary" onClick={onClickLogin}>
             ログインする
           </Button>
         </CardActions>
