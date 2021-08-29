@@ -7,6 +7,8 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
 import { Header } from "../Header/Header";
+import { useHistory } from "react-router-dom";
+import { useCallback } from "react";
 
 const useStyles = makeStyles({
   root: {
@@ -30,6 +32,9 @@ const useStyles = makeStyles({
 
 export const Login = () => {
   const classes = useStyles();
+  const history = useHistory();
+
+  const onClickLogin = useCallback(() => history.push("/"), []);
 
   return (
     <>
@@ -42,7 +47,9 @@ export const Login = () => {
           <TextField id="outlined-basic" label="Outlined" variant="outlined" />
         </CardContent>
         <CardActions>
-          <Button size="small">Learn More</Button>
+          <Button size="small" onClick={onClickLogin}>
+            ログインする
+          </Button>
         </CardActions>
       </Card>
     </>
