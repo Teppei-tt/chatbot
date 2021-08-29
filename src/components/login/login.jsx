@@ -45,7 +45,7 @@ export const Login = () => {
             Login画面
           </Typography>
           <Typography gutterBottom variant="h5" component="p">
-            パスワードを入力してください。
+            パスワードを入力してください！
           </Typography>
           <TextField id="outlined-basic" label="Enter Password" variant="outlined" />
         </CardContent>
