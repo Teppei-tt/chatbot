@@ -34,7 +34,7 @@ export const Login = () => {
   const classes = useStyles();
   const history = useHistory();
 
-  const onClickLogin = useCallback(() => history.push("/"), []);
+  const onClickLogin = useCallback(() => history.push("/Home"), []);
 
   return (
     <>
