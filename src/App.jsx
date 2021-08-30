@@ -2,14 +2,22 @@ import React from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import "./assets/styles/style.css";
 import { Login } from "./components/login/login";
-import { Top } from "./components/Top";
+import { Home } from "./components/Home";
+import { Page404 } from "./components/Page404";
 
 const App = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/login" component={Login} />
-        <Route path="/" component={Top} />
+        <Route exact path="/">
+          <Login />
+        </Route>
+        <Route path="/Home">
+          <Home />
+        </Route>
+        <Route path="*">
+          <Page404 />
+        </Route>
       </Switch>
     </BrowserRouter>
   );

@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "../assets/styles/style.css";
-import { AnswersList, Chats } from "../components/index";
-import { Header } from "../components/Header/Header";
+import { AnswersList, Chats } from "./index";
+import { Header } from "./Header/Header";
 
-import FromDialog from "../components/Forms/FormDialog";
+import FromDialog from "./Forms/FormDialog";
 import { db } from "../firebase/index";
 
-export const Top = () => {
+export const Home = () => {
   const [answers, setAnswers] = useState([]);
   const [chats, setChats] = useState([]);
   const [currentId, setCurrendId] = useState("init");
