@@ -5,6 +5,7 @@ import { Header } from "./Header/Header";
 
 import FromDialog from "./Forms/FormDialog";
 import { db } from "../firebase/index";
+import { Button, ButtonGroup } from "@material-ui/core";
 
 export const Home = () => {
   const [answers, setAnswers] = useState([]);
@@ -103,6 +104,7 @@ export const Home = () => {
     }
   });
 
+  const onClickReset = () => console.log("unko");
   return (
     <section className="c-section">
       <Header />
@@ -111,6 +113,14 @@ export const Home = () => {
         <AnswersList answers={answers} select={selectAnswer} />
         <FromDialog open={open} handleClose={handleClose} />
       </div>
+      <ButtonGroup>
+        <Button variant="contained" color="primary" onClick={onClickReset}>
+          Homeに戻る
+        </Button>
+        <Button variant="contained" color="primary" onClick={onClickReset}>
+          Homeに戻る
+        </Button>
+      </ButtonGroup>
     </section>
   );
 };
