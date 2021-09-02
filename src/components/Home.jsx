@@ -5,9 +5,25 @@ import { Header } from "./Header/Header";
 
 import FromDialog from "./Forms/FormDialog";
 import { db } from "../firebase/index";
-import { Button, ButtonGroup } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Card,
+  CardContent,
+  makeStyles,
+} from "@material-ui/core";
 
-export const Home = () => {
+
+
+export const Home = (theme) => {
+  const useStyles = makeStyles({
+    root: {
+      maxWidth: 600,
+      margin: theme.spacing(1),
+    },
+  });
+  const classes = useStyles();
   const [answers, setAnswers] = useState([]);
   const [chats, setChats] = useState([]);
   const [currentId, setCurrendId] = useState("init");
@@ -106,13 +122,15 @@ export const Home = () => {
 
   const onClickReset = () => console.log("unko");
   return (
-    <section className="c-section">
+    <Box>
       <Header />
-      <div className="c-box">
-        <Chats chats={chats} />
-        <AnswersList answers={answers} select={selectAnswer} />
-        <FromDialog open={open} handleClose={handleClose} />
-      </div>
+      <Card className={classes.root}>
+        <CardContent>
+          <Chats chats={chats} />
+          <AnswersList answers={answers} select={selectAnswer} />
+          <FromDialog open={open} handleClose={handleClose} />
+        </CardContent>
+      </Card>
       <ButtonGroup>
         <Button variant="contained" color="primary" onClick={onClickReset}>
           Homeに戻る
@@ -121,6 +139,6 @@ export const Home = () => {
           Homeに戻る
         </Button>
       </ButtonGroup>
-    </section>
+    </Box>
   );
 };
