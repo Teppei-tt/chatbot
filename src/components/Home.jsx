@@ -14,13 +14,15 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-
-
 export const Home = (theme) => {
   const useStyles = makeStyles({
     root: {
       maxWidth: 600,
-      margin: theme.spacing(1),
+      margin: "auto",
+    },
+    chatArea: {},
+    buttonGroup: {
+      width: "100%",
     },
   });
   const classes = useStyles();
@@ -124,21 +126,23 @@ export const Home = (theme) => {
   return (
     <Box>
       <Header />
-      <Card className={classes.root}>
-        <CardContent>
-          <Chats chats={chats} />
-          <AnswersList answers={answers} select={selectAnswer} />
-          <FromDialog open={open} handleClose={handleClose} />
-        </CardContent>
-      </Card>
-      <ButtonGroup>
-        <Button variant="contained" color="primary" onClick={onClickReset}>
-          Homeに戻る
-        </Button>
-        <Button variant="contained" color="primary" onClick={onClickReset}>
-          Homeに戻る
-        </Button>
-      </ButtonGroup>
+      <Box className={classes.root}>
+        <Card>
+          <CardContent>
+            <Chats chats={chats} />
+            <AnswersList answers={answers} select={selectAnswer} />
+            <FromDialog open={open} handleClose={handleClose} />
+          </CardContent>
+        </Card>
+        <ButtonGroup  padding>
+          <Button variant="contained" color="primary" onClick={onClickReset}>
+            Homeに戻る
+          </Button>
+          <Button variant="contained" color="primary" onClick={onClickReset}>
+            Homeに戻る
+          </Button>
+        </ButtonGroup>
+      </Box>
     </Box>
   );
 };
