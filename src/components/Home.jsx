@@ -8,7 +8,6 @@ import { db } from "../firebase/index";
 import {
   Box,
   Button,
-  ButtonGroup,
   Card,
   CardContent,
   makeStyles,
@@ -18,11 +17,15 @@ export const Home = (theme) => {
   const useStyles = makeStyles({
     root: {
       maxWidth: 600,
+      paddingTop: 80,
       margin: "auto",
     },
     chatArea: {},
     buttonGroup: {
+      paddingTop: 30,
       width: "100%",
+      display: "flex",
+      justifyContent: "space-evenly",
     },
   });
   const classes = useStyles();
@@ -134,14 +137,14 @@ export const Home = (theme) => {
             <FromDialog open={open} handleClose={handleClose} />
           </CardContent>
         </Card>
-        <ButtonGroup  padding>
+        <Box className={classes.buttonGroup}>
           <Button variant="contained" color="primary" onClick={onClickReset}>
-            Homeに戻る
+            リセット
           </Button>
           <Button variant="contained" color="primary" onClick={onClickReset}>
-            Homeに戻る
+            問い合わせ
           </Button>
-        </ButtonGroup>
+        </Box>
       </Box>
     </Box>
   );
