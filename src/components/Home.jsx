@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import "../assets/styles/style.css";
 import { AnswersList, Chats } from "./index";
 import { Header } from "./Header/Header";
-
 import FromDialog from "./Forms/FormDialog";
 import { db } from "../firebase/index";
 import {
@@ -13,7 +12,7 @@ import {
   makeStyles,
 } from "@material-ui/core";
 
-export const Home = (theme) => {
+export const Home = () => {
   const useStyles = makeStyles({
     root: {
       maxWidth: 600,
