@@ -6,7 +6,8 @@ import NoProfile from "../assets/img/noimg.jpg";
 import Teppei from "../assets/img/my-img.PNG";
 
 const Chat = (props) => {
-  const isQuestion = props.type === "question";
+  const { type, text } = props;
+  const isQuestion = type === "question";
   const classes = isQuestion ? "p-chat__row" : "p-chat__reverse";
 
   return (
@@ -18,7 +19,7 @@ const Chat = (props) => {
           <Avatar alt="icon" src={NoProfile} />
         )}
       </ListItemAvatar>
-      <div className="p-chat__bubble">{props.text}</div>
+      <div className="p-chat__bubble">{text}</div>
     </ListItem>
   );
 };
