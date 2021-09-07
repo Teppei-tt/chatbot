@@ -1,15 +1,15 @@
 {
   "init": {
     "answers": [
-      { "content": "仕事を依頼したい", "nextId": "job_offer" },
+      { "content": "これはどんなアプリ？", "nextId": "this_app" },
       {
-        "content": "エンジニアのキャリアについて相談したい",
-        "nextId": "consultant"
+        "content": "あなたについて聞きたい",
+        "nextId": "yourself"
       },
-      { "content": "学習コミュニティについて知りたい", "nextId": "community" },
-      { "content": "お付き合いしたい", "nextId": "dating" }
+      { "content": "連絡する", "nextId": "contact" },
+      { "content": "ヤギの画像を見る", "nextId": "yagi" }
     ],
-    "question": "こんにちは！🐯トラハックへのご用件はなんでしょうか？"
+    "question": "はじめまして髙田哲平といいます。私の自己紹介をするチャットボットです。"
   },
   "job_offer": {
     "answers": [
