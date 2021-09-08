@@ -11,18 +11,18 @@
     ],
     "question": "はじめまして髙田哲平といいます。私の自己紹介をするチャットボットです。"
   },
-  "job_offer": {
+  "this_app": {
     "answers": [
-      { "content": "Webサイトを制作してほしい", "nextId": "website" },
-      { "content": "Webアプリを開発してほしい", "nextId": "webapp" },
-      { "content": "自動化ツールを作ってほしい", "nextId": "automation_tool" },
-      { "content": "その他", "nextId": "other_jobs" }
+      { "content": "なぜこのアプリを作ったの？", "nextId": "why_app" },
+      { "content": "どんな技術を使ったの？", "nextId": "what_tecnology" },
+      { "content": "ソースコードを見せてほしい", "nextId": "code" },
+      { "content": "このアプリの魅力は?", "nextId": "charmpoint" }
     ],
-    "question": "どのようなお仕事でしょうか？"
+    "question": "このアプリについてどのようなことが聞きたいですが？"
   },
-  "website": {
+  "why_app": {
     "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "「私の自己紹介をするアプリがあれば、私のことを知ってもらえる機会が増えるぞ!!」と思ったから。", "nextId": "contact" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "Webサイト細作についてですね。コチラからお問い合わせできます。"
