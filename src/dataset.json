@@ -28,35 +28,29 @@
     "question": "私の自己紹介をするアプリがあれば、私のことを知ってもらえる機会が増えるぞ!!」と思ったから。"
   },
   "what_tecnology": {
-    "answers": [
-      { "content": "一つ前の質問に戻る", "nextId": "this_app" }
-    ],
+    "answers": [{ "content": "一つ前の質問に戻る", "nextId": "this_app" }],
     "question": "react✕firebaseで制作しました。"
   },
-  "automation_tool": {
-    "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
-      { "content": "最初の質問に戻る", "nextId": "init" }
-    ],
-    "question": "自動化ツール開発についてですね。コチラからお問い合わせできます。"
+  "code": {
+    "answers": [{ "content": "一つ前の質問に戻る", "nextId": "this_app" }],
+    "question": "https://github.com/Teppei-tt/chatbot"
   },
-  "other_jobs": {
-    "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
-      { "content": "最初の質問に戻る", "nextId": "init" }
-    ],
-    "question": "その他についてですね。コチラからお問い合わせできます。"
+  "charmpoint": {
+    "answers": [{ "content": "一つ前の質問に戻る", "nextId": "this_app" }],
+    "question": "ランダムにヤギの画像がでるところです。一見しょうもない機能ですが、クスッと笑えませんかｗ"
   },
-  "consultant": {
+  "yourself": {
     "answers": [
       {
-        "content": "YouTubeで動画を見る",
-        "nextId": "https://www.youtube.com/channel/UC-bOAxx-YOsviSmqh8COR0w"
+        "content": "どんなエンジニアを目指してますか？",
+        "nextId": "aspire"
       },
-      { "content": "学習コミュニティについて知りたい", "nextId": "community" },
-      { "content": "最初の質問に戻る", "nextId": "init" }
+      {
+        "content": "なぜエンジニアになろうとおもったの？",
+        "nextId": "why_engineer"
+      }
     ],
-    "question": "トラハックは普段からYouTubeでキャリアについて発信しています。また、僕が運営するエンジニア向け学習コミュニティ内でも相談に乗っていますよ。"
+    "question": "私についてどのようなことを知りたいですか？"
   },
   "community": {
     "answers": [
