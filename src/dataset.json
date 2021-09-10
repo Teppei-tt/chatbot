@@ -48,7 +48,12 @@
       {
         "content": "なぜエンジニアになろうとおもったの？",
         "nextId": "why_engineer"
-      }
+      },
+      {
+        "content": "これまでどのような学習をしてきた？",
+        "nextId": "what_learn"
+      },
+      { "content": "一つ前の質問に戻る", "nextId": "yourself" }
     ],
     "question": "私についてどのようなことを知りたいですか？"
   },
